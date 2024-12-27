@@ -22,14 +22,14 @@ int main()
     return 0;
 }
 void updateImage(bool image[][M],int s,int x,int y){
-  int size;
-     for(int i = 0; i < 70; i++){
+  double size;
+    for(int i = 0; i < 70; i++){
          for(int j = 0; j < 30; j++){
-        size = sqrt((pow((i-N),2))+(pow((j-M),2)));
-        if(size <= s-1){
-        image[i][j]=1;
+            size = sqrt((pow((j-x),2))+(pow((i-y),2)));
+    if(size <= s-1){
+    image[j][i] = 1;
                 
-            }
+    }
          }
      }
  }
